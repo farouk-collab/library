@@ -1,0 +1,339 @@
+.home {
+  display: grid;
+  gap: 18px;
+}
+
+/* ANIMATIONS */
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* HERO */
+.home-hero {
+  position: relative;
+  border-radius: 26px;
+  padding: 26px;
+  background:
+    linear-gradient(135deg, #fbf7f0, #f2ede2);
+  box-shadow: 0 12px 30px rgba(0,0,0,.08);
+  overflow: hidden;
+  animation: slideInDown 0.6s ease-out;
+}
+
+.home-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(900px 320px at 12% 10%, rgba(124,58,237,.18), transparent 60%),
+    radial-gradient(900px 320px at 90% 0%, rgba(17,24,39,.10), transparent 60%);
+  pointer-events: none;
+}
+
+.home-hero__grid {
+  position: relative;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+@media (min-width: 980px) {
+  .home-hero__grid {
+    grid-template-columns: 1.6fr .9fr;
+  }
+}
+
+.home-title {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 950;
+  letter-spacing: -0.02em;
+  animation: slideInDown 0.8s ease-out 0.1s both;
+}
+
+.home-subtitle {
+  margin: 12px 0 0;
+  line-height: 1.6;
+  color: rgba(17,24,39,.72);
+  animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+.home-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  animation: slideInUp 0.8s ease-out 0.3s both;
+}
+
+/* buttons */
+.home-btn {
+  appearance: none;
+  border: 1px solid rgba(17,24,39,.14);
+  background: rgba(255,255,255,.75);
+  padding: 10px 12px;
+  border-radius: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none;
+  color: #111827;
+  box-shadow: 0 2px 0 rgba(17,24,39,.04);
+  transition: transform .06s ease, box-shadow .18s ease, background .18s ease;
+  animation: slideInUp 0.6s ease-out 0.4s both;
+}
+
+.home-btn:hover {
+  box-shadow: 0 14px 24px rgba(0,0,0,.08);
+  transform: translateY(-3px);
+}
+
+.home-btn:active {
+  transform: translateY(1px);
+}
+
+.home-btn--primary {
+  background: #111827;
+  color: white;
+  border-color: rgba(17,24,39,.2);
+}
+
+.home-btn--primary:hover {
+  background: #1f2937;
+}
+
+.home-btn--full {
+  width: 100%;
+  text-align: center;
+}
+
+/* mini cards right */
+.home-hero__side {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  animation: slideInRight 0.8s ease-out 0.2s both;
+}
+
+.home-miniCard {
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(17,24,39,.10);
+  border-radius: 18px;
+  padding: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-miniCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,.12);
+}
+
+.home-miniCard__title {
+  font-weight: 950;
+}
+
+.home-miniCard__text {
+  margin-top: 8px;
+  color: rgba(17,24,39,.7);
+  line-height: 1.5;
+}
+
+/* section header */
+.home-sectionHead {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.home-h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 950;
+}
+
+.home-muted {
+  color: rgba(17,24,39,.62);
+  line-height: 1.5;
+}
+
+/* badges */
+.home-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(17,24,39,.12);
+  background: rgba(255,255,255,.7);
+  font-weight: 800;
+  font-size: .9rem;
+}
+
+/* chips */
+.home-chips {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+  animation: slideInUp 0.8s ease-out 0.4s both;
+}
+
+.home-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(17,24,39,.12);
+  background: rgba(255,255,255,.75);
+  text-decoration: none;
+  font-weight: 900;
+  color: #111827;
+  transition: transform .15s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.home-chip:hover {
+  box-shadow: 0 14px 24px rgba(0,0,0,.08);
+  transform: translateY(-3px) scale(1.05);
+}
+
+.home-chip:active {
+  transform: translateY(0) scale(1);
+}
+
+.home-chip__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #111827, #7c3aed);
+}
+
+/* cards grid */
+.home-cards {
+  display: grid;
+  gap: 14px;
+  animation: fadeIn 1s ease-out 0.5s both;
+}
+
+@media (min-width: 900px) {
+  .home-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.home-card {
+  background: rgba(255,255,255,.78);
+  border: 1px solid rgba(17,24,39,.10);
+  border-radius: 20px;
+  padding: 14px;
+  box-shadow: 0 10px 20px rgba(0,0,0,.06);
+  display: grid;
+  gap: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideInUp 0.6s ease-out both;
+}
+
+.home-card:nth-child(1) {
+  animation-delay: 0.6s;
+}
+
+.home-card:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+.home-card:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+.home-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0,0,0,.12);
+}
+
+.home-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.home-card__title {
+  font-weight: 950;
+  line-height: 1.25;
+}
+
+.home-card__bottom {
+  margin-top: 6px;
+}
+
+/* alert */
+.home-alert {
+  border-radius: 18px;
+  border: 1px solid #f2c2c2;
+  background: #fff5f5;
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.home-alert__title {
+  font-weight: 950;
+}

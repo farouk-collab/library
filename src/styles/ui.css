@@ -1,0 +1,103 @@
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 16px 40px;
+}
+
+.h1 {
+  margin: 0;
+  font-size: 30px;
+  letter-spacing: -0.03em;
+}
+
+.subtle {
+  color: var(--muted);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow2);
+}
+
+.cardPad { padding: 16px; }
+
+.grid { display: grid; gap: 14px; }
+
+.grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+@media (max-width: 900px) {
+  .grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .grid--2, .grid--3 { grid-template-columns: 1fr; }
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Buttons */
+.btn {
+  border: 1px solid var(--border);
+  background: white;
+  border-radius: 14px;
+  padding: 10px 12px;
+  cursor: pointer;
+  box-shadow: var(--shadow2);
+  transition: transform .05s ease, box-shadow .15s ease;
+}
+.btn:hover { box-shadow: var(--shadow); }
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: .55; cursor: not-allowed; }
+
+.btnPrimary {
+  background: var(--accent);
+  color: white;
+  border-color: rgba(255,255,255,0.08);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--border);
+  background: rgba(17,24,39,0.03);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  color: rgba(17,24,39,0.85);
+}
+
+/* Inputs */
+input, select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: white;
+  outline: none;
+  box-shadow: var(--shadow2);
+}
+input:focus, select:focus {
+  border-color: rgba(124,58,237,0.35);
+  box-shadow: 0 0 0 4px rgba(124,58,237,0.12);
+}
+
+/* Skeleton */
+.skel {
+  border-radius: 12px;
+  background: linear-gradient(90deg, rgba(17,24,39,0.05), rgba(17,24,39,0.02), rgba(17,24,39,0.05));
+  background-size: 200% 100%;
+  animation: skel 1.1s infinite linear;
+}
+@keyframes skel { 0% { background-position: 0% 0; } 100% { background-position: -200% 0; } }
+.skelLine { height: 12px; }
+.skelTitle { height: 18px; }

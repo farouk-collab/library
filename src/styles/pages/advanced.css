@@ -1,0 +1,62 @@
+/* AdvancedSearchPage styles */
+
+.advanced-search {
+  padding: 0;
+}
+
+.advanced-header {
+  position: relative;
+  border-radius: 26px;
+  padding: 26px;
+  background: linear-gradient(135deg, #fbf7f0, #f2ede2);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin: 0 16px;
+}
+
+.advanced-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(900px 320px at 12% 10%, rgba(124, 58, 237, 0.18), transparent 60%),
+    radial-gradient(900px 320px at 90% 0%, rgba(17, 24, 39, 0.10), transparent 60%);
+  pointer-events: none;
+}
+
+.advanced-header__content {
+  position: relative;
+  z-index: 1;
+}
+
+.advanced-title {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 950;
+  letter-spacing: -0.02em;
+}
+
+.advanced-subtitle {
+  margin: 12px 0 0;
+  line-height: 1.6;
+  color: rgba(17, 24, 39, 0.72);
+}
+
+.advanced-form {
+  margin-top: 16px;
+}
+
+@media (max-width: 640px) {
+  .advanced-header {
+    padding: 20px;
+    margin: 0;
+  }
+
+  .advanced-title {
+    font-size: 1.75rem;
+  }
+
+  .advanced-subtitle {
+    font-size: 0.95rem;
+  }
+}

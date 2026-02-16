@@ -1,0 +1,122 @@
+/* UI kit plus "bibliothèque" */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 16px 44px;
+}
+
+/* Titles */
+.h1 {
+  margin: 0;
+  font-size: 34px;
+  letter-spacing: -0.04em;
+}
+.h2 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+}
+
+.subtle { color: var(--muted); }
+
+/* Cards */
+.card {
+  background: rgba(255,255,255,0.86);
+  border: 1px solid rgba(17, 24, 39, 0.10);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(17,24,39,0.06);
+}
+.cardPad { padding: 16px; }
+
+.card--glass {
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(12px);
+}
+
+/* Layout helpers */
+.grid { display: grid; gap: 14px; }
+.grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+@media (max-width: 900px) { .grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .grid--2, .grid--3 { grid-template-columns: 1fr; } }
+
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Buttons */
+.btn {
+  border: 1px solid rgba(17,24,39,0.12);
+  background: rgba(255,255,255,0.9);
+  border-radius: 16px;
+  padding: 10px 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 0 rgba(17,24,39,0.03);
+  transition: transform .06s ease, box-shadow .15s ease, background .15s ease;
+}
+.btn:hover { box-shadow: 0 10px 20px rgba(17,24,39,0.08); }
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: .55; cursor: not-allowed; }
+
+.btnPrimary {
+  background: linear-gradient(135deg, rgba(17,24,39,1), rgba(124,58,237,1));
+  color: white;
+  border-color: rgba(255,255,255,0.14);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(17,24,39,0.12);
+  background: rgba(17,24,39,0.04);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+/* Inputs */
+input, select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(17,24,39,0.12);
+  background: rgba(255,255,255,0.95);
+  outline: none;
+  box-shadow: 0 2px 0 rgba(17,24,39,0.03);
+}
+input:focus, select:focus {
+  border-color: rgba(124,58,237,0.38);
+  box-shadow: 0 0 0 4px rgba(124,58,237,0.12);
+}
+
+/* Fancy "book cover" placeholder */
+.coverPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: rgba(17,24,39,0.45);
+  background:
+    radial-gradient(250px 120px at 30% 20%, rgba(124,58,237,0.18), transparent 60%),
+    radial-gradient(250px 120px at 80% 0%, rgba(17,24,39,0.10), transparent 60%),
+    rgba(255,255,255,0.8);
+}
+
+/* Skeleton */
+.skel {
+  border-radius: 12px;
+  background: linear-gradient(90deg, rgba(17,24,39,0.06), rgba(17,24,39,0.02), rgba(17,24,39,0.06));
+  background-size: 200% 100%;
+  animation: skel 1.1s infinite linear;
+}
+@keyframes skel { 0% { background-position: 0% 0; } 100% { background-position: -200% 0; } }
+.skelLine { height: 12px; }
+.skelTitle { height: 18px; }

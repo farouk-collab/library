@@ -1,0 +1,145 @@
+/* WorkPage animations and styling */
+
+.work-cover {
+  animation: slideInLeft 0.7s ease-out;
+}
+
+.work-info {
+  animation: slideInRight 0.7s ease-out;
+}
+
+.work-title {
+  animation: slideInDown 0.6s ease-out 0.1s both;
+}
+
+.work-subtitle {
+  animation: fadeIn 0.6s ease-out 0.2s both;
+}
+
+.work-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  animation: slideInUp 0.6s ease-out 0.3s both;
+}
+
+.work-btn {
+  animation: slideInUp 0.6s ease-out 0.35s both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-btn:hover {
+  transform: translateY(-3px);
+}
+
+.work-details {
+  animation: fadeIn 0.8s ease-out 0.4s both;
+  display: grid;
+  gap: 10px;
+}
+
+.work-detail-item {
+  animation: slideInUp 0.6s ease-out both;
+  transition: transform 0.3s ease;
+}
+
+.work-detail-item:nth-child(1) {
+  animation-delay: 0.45s;
+}
+
+.work-detail-item:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.work-detail-item:nth-child(3) {
+  animation-delay: 0.55s;
+}
+
+.work-detail-item:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.work-detail-item:hover {
+  transform: translateX(4px);
+}
+
+/* Related books grid */
+.work-related {
+  animation: slideInUp 0.8s ease-out 0.65s both;
+  margin-top: 24px;
+}
+
+.work-related-title {
+  animation: slideInDown 0.6s ease-out 0.7s both;
+  margin-bottom: 16px;
+}
+
+.work-related-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+}
+
+.work-related-card {
+  animation: slideInUp 0.6s ease-out both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-related-card:nth-child(1) {
+  animation-delay: 0.75s;
+}
+
+.work-related-card:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+.work-related-card:nth-child(3) {
+  animation-delay: 0.85s;
+}
+
+.work-related-card:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+.work-related-card:nth-child(5) {
+  animation-delay: 0.95s;
+}
+
+.work-related-card:nth-child(6) {
+  animation-delay: 1s;
+}
+
+.work-related-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,.15);
+}
+
+/* Wikipedia section */
+.work-wiki {
+  animation: fadeIn 0.8s ease-out 0.8s both;
+  margin-top: 24px;
+  padding: 20px;
+  background: rgba(255,255,255,.5);
+  border: 1px solid rgba(17,24,39,.08);
+  border-radius: 16px;
+}
+
+.work-wiki-title {
+  animation: slideInDown 0.6s ease-out 0.85s both;
+}
+
+.work-wiki-content {
+  animation: slideInUp 0.6s ease-out 0.9s both;
+  margin-top: 12px;
+  line-height: 1.6;
+  color: rgba(17,24,39,.75);
+}
+
+/* Error and loading states */
+.work-error {
+  animation: slideInDown 0.5s ease-out;
+}
+
+.work-loading {
+  animation: fadeIn 0.4s ease-out;
+}
